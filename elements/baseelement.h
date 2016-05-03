@@ -7,7 +7,7 @@ class IBaseElement : public QObject{
     Q_OBJECT
 
 public:
-    IBaseElement(float x,float y){
+    IBaseElement(float x,float y,float z){
         this->x = x;
         this->y = y;
     }
@@ -19,9 +19,12 @@ public:
         return y;
     }
 
-private:
-    float x,y;
+    float getZ(){
+        return z;
+    }
 
+private:
+    float x,y,z;
 
 };
 
