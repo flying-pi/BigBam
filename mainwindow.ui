@@ -6,22 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>398</width>
+    <height>306</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="NePoPacanski" name="PoPacanski" native="true">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>80</y>
-      <width>120</width>
-      <height>80</height>
+      <x>0</x>
+      <y>-10</y>
+      <width>800</width>
+      <height>800</height>
      </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>800</width>
+      <height>800</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>800</width>
+      <height>800</height>
+     </size>
     </property>
    </widget>
   </widget>
@@ -30,8 +42,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
-     <height>22</height>
+     <width>398</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
@@ -46,6 +58,14 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>NePoPacanski</class>
+   <extends>QWidget</extends>
+   <header>nepopacanski.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
