@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    mainlooper.cpp
+    mainlooper.cpp \
+    elements/simpleelement.cpp
 
 HEADERS  += mainwindow.h \
     elements/baseelement.h \
-    mainlooper.h
+    mainlooper.h \
+    elements/simpleelement.h
 
 FORMS    += mainwindow.ui

@@ -10,22 +10,43 @@ public:
     IBaseElement(float x,float y,float z){
         this->x = x;
         this->y = y;
+        this->z=z;
     }
 
-    float getX(){
+    inline float getX(){
         return x;
     }
-    float getY(){
+    inline float getY(){
         return y;
     }
 
-    float getZ(){
+    inline  float getZ(){
         return z;
     }
 
-private:
+    virtual void nextStep(){
+        stepFlag = !stepFlag;
+    }
+
+    inline float getSyncx(bool flag){
+        return flag == stepFlag? x:oldX;
+    }
+
+    inline float getSyncY(bool flag){
+        return flag == stepFlag? y:oldY;
+    }
+
+    inline float getSyncZ(bool flag){
+        return flag == stepFlag? z:oldZ;
+    }
+
+
+protected:
     float x,y,z;
+    float oldX,oldY,oldZ;
+    bool stepFlag = true;
 
 };
 
 #endif // BASEELEMENT_H
+
